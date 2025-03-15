@@ -1,0 +1,19 @@
+<div class="user-container">
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <h2>Panel de Usuario</h2>
+    <button class="logout-btn" (click)="logout()">Cerrar Sesión</button>
+    <ul>
+      <li><a routerLink="resumen" routerLinkActive="active">📋 Resumen</a></li>
+      <li><a routerLink="courses" routerLinkActive="active">📚 Mis cursos</a></li>
+      <li><a routerLink="calendar" routerLinkActive="active">📅 Calendario</a></li>
+      <li><a routerLink="certificates" routerLinkActive="active">🎓 Certificados</a></li>
+      <li><a routerLink="progress" routerLinkActive="active">📈 Mi progreso</a></li>
+    </ul>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <router-outlet></router-outlet> <!-- Added this -->
+  </main>
+</div>

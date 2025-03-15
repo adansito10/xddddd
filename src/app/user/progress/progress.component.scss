@@ -1,0 +1,264 @@
+.flex {
+    display: flex;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .gap-2 {
+    gap: 0.5rem;
+  }
+  
+  .w-\[180px\] {
+    width: 180px;
+  }
+  
+  .mr-2 {
+    margin-right: 0.5rem;
+  }
+  
+  .h-4 {
+    height: 1rem;
+  }
+  
+  .w-4 {
+    width: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .md\:grid-cols-4 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  .pb-2 {
+    padding-bottom: 0.5rem;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .text-3xl {
+    font-size: 1.875rem;
+  }
+  
+  .gap-1 {
+    gap: 0.25rem;
+  }
+  
+  .text-xs {
+    font-size: 0.75rem;
+  }
+  
+  .text-green-600 {
+    color: #16a34a;
+  }
+  
+  .h-3 {
+    height: 0.75rem;
+  }
+  
+  .w-3 {
+    width: 0.75rem;
+  }
+  
+  .h-\[300px\] {
+    height: 300px;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .bg-muted-20 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .rounded-md {
+    border-radius: 0.375rem;
+  }
+  
+  .h-16 {
+    height: 4rem;
+  }
+  
+  .w-16 {
+    width: 4rem;
+  }
+  
+  .text-muted-foreground-50 {
+    color: rgba(102, 102, 102, 0.5);
+  }
+  
+  .ml-2 {
+    margin-left: 0.5rem;
+  }
+  
+  .text-muted-foreground {
+    color: #666;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .space-y-4 {
+    & > * + * {
+      margin-top: 1rem;
+    }
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gap-4 {
+    gap: 1rem;
+  }
+  
+  .space-y-2 {
+    & > * + * {
+      margin-top: 0.5rem;
+    }
+  }
+  
+  .mb-1 {
+    margin-bottom: 0.25rem;
+  }
+  
+  .h-1 {
+    height: 0.25rem;
+  }
+  
+  .h-2 {
+    height: 0.5rem;
+  }
+  
+  .mt-8 {
+    margin-top: 2rem;
+  }
+  
+  .md\:grid-cols-2 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .h-10 {
+    height: 2.5rem;
+  }
+  
+  .w-10 {
+    width: 2.5rem;
+  }
+  
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  
+  .bg-primary-10 {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  
+  .h-5 {
+    height: 1.25rem;
+  }
+  
+  .w-5 {
+    width: 1.25rem;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }/* Estilo para las tarjetas */
+mat-card {
+  background: white; /* Fondo blanco */
+  border: none; /* Quitar borde */
+  border-radius: 0.5rem; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra negra suave */
+  transition: box-shadow 0.3s ease; /* Transición suave para el hover */
+}
+
+mat-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Estilo para botones negros */
+mat-button[color="primary"],
+mat-button[color="accent"] {
+  background-color: #111827; /* Fondo negro oscuro */
+  color: white; /* Texto blanco */
+  border-radius: 0.25rem; /* Esquinas ligeramente redondeadas */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+mat-button[color="primary"]:hover,
+mat-button[color="accent"]:hover {
+  background-color: #1f2937; /* Negro ligeramente más claro al pasar el mouse */
+}
+
+/* Íconos dentro de botones en blanco */
+mat-button[color="primary"] mat-icon,
+mat-button[color="accent"] mat-icon {
+  color: white; /* Íconos blancos dentro de botones negros */
+}
+
+/* Íconos generales en negro (excepto donde están definidos en verde) */
+mat-icon:not(.text-green-600):not(.text-primary-60):not(.text-muted-foreground-50) {
+  color: #000000; /* Íconos negros por defecto */
+}
+
+/* Asegurar que el texto general sea negro para legibilidad */
+mat-card-title,
+mat-card-subtitle,
+.text-sm,
+.text-3xl,
+.text-xs:not(.text-green-600) {
+  color: #000000; /* Texto negro por defecto, excepto donde está en verde */
+}

@@ -1,0 +1,219 @@
+.space-y-6 {
+    margin-bottom: 1.5rem;
+  
+    > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+  
+  .flex {
+    display: flex;
+  
+    &.justify-between {
+      justify-content: space-between;
+    }
+  
+    &.items-center {
+      align-items: center;
+    }
+  
+    &.gap-2 {
+      gap: 0.5rem;
+    }
+  
+    &.flex-row-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  
+    &.md\:grid-cols-2 {
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    &.md\:grid-cols-3 {
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+    &.md\:grid-cols-4 {
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .text-3xl {
+    font-size: 1.875rem;
+  }
+  
+  .text-xs {
+    font-size: 0.75rem;
+  }
+  
+  .text-muted-foreground {
+    color: #6b7280; // Ajusta según tu tema
+  }
+  
+  .progress-bar {
+    margin-top: 1rem;
+    height: 0.25rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  
+    .progress-fill {
+      height: 100%;
+      background-color: #3b82f6; // Color primario, ajusta según tu tema
+  
+      &.w-3\/4 {
+        width: 75%;
+      }
+  
+      &.w-1\/2 {
+        width: 50%;
+      }
+  
+      &.w-4\/5 {
+        width: 80%;
+      }
+  
+      &.w-\[85\%\] {
+        width: 85%;
+      }
+    }
+  }
+  
+  .chart-placeholder {
+    height: 300px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .icon {
+      height: 4rem;
+      width: 4rem;
+      color: #9ca3af; // Ajusta según tu tema
+    }
+  
+    span {
+      margin-left: 0.5rem;
+      color: #9ca3af;
+    }
+  }
+  
+  .badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  
+    &.active {
+      background-color: #d1fae5;
+      color: #047857;
+    }
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+
+/* Specific overrides */
+mat-card-header, 
+mat-card-content, 
+mat-card-title, 
+mat-card-subtitle {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.text-2xl, 
+.text-3xl, 
+.text-sm, 
+.text-xs, 
+.font-bold, 
+.font-medium, 
+.text-muted-foreground {
+  color: #000000 !important; /* Black text for all text classes */
+}
+
+.progress-bar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Lighter shadow for progress bar */
+}
+
+.progress-fill {
+  background-color: #000000 !important; /* Black fill for progress bars */
+}
+
+.chart-placeholder {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.chart-placeholder .icon, 
+.chart-placeholder span {
+  color: #000000 !important; /* Black icons and text in chart placeholder */
+}
+
+.badge.active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Buttons */
+button[mat-stroked-button], 
+button[mat-raised-button] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+button[mat-raised-button][color="primary"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Table */
+table mat-table, 
+th[mat-header-cell], 
+td[mat-cell] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+mat-icon {
+  color: #000000 !important; /* Black icons */
+}

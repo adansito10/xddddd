@@ -1,0 +1,286 @@
+<div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Mis Cursos</h1>
+    <div class="flex gap-2">
+      <div class="relative">
+        <mat-icon class="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground">search</mat-icon>
+        <input matInput placeholder="Buscar cursos..." class="pl-8 w-[250px]" />
+      </div>
+      <button mat-icon-button matTooltip="Filtrar">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+  </div>
+  
+  <mat-tab-group>
+    <mat-tab label="En progreso">
+      <div class="grid gap-6 md:grid-cols-2">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Mantenimiento Predictivo con IA</mat-card-title>
+            <mat-card-subtitle>Nivel: Intermedio</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip>En progreso</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 65%</span>
+              <span class="text-sm font-medium">13/20 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
+            <div class="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+              <mat-icon class="h-4 w-4">schedule</mat-icon>
+              <span>Última actividad: Ayer</span>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" class="w-full">Continuar curso</button>
+          </mat-card-actions>
+        </mat-card>
+  
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Análisis de Datos Industriales</mat-card-title>
+            <mat-card-subtitle>Nivel: Principiante</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip>En progreso</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 30%</span>
+              <span class="text-sm font-medium">6/20 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+            <div class="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+              <mat-icon class="h-4 w-4">schedule</mat-icon>
+              <span>Última actividad: Hace 3 días</span>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" class="w-full">Continuar curso</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mat-tab>
+  
+    <mat-tab label="Completados">
+      <div class="grid gap-6 md:grid-cols-2">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Introducción a la Industria 4.0</mat-card-title>
+            <mat-card-subtitle>Nivel: Principiante</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip class="bg-green-100 text-green-800">Completado</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 100%</span>
+              <span class="text-sm font-medium">15/15 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+            <div class="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+              <mat-icon class="h-4 w-4">schedule</mat-icon>
+              <span>Completado: 15/04/2023</span>
+            </div>
+            <div class="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
+              <mat-icon class="h-4 w-4 text-yellow-500">star</mat-icon>
+              <span>Calificación: 4.8/5</span>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="accent">Ver certificado</button>
+            <button mat-button color="accent">Revisar curso</button>
+          </mat-card-actions>
+        </mat-card>
+  
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Fundamentos de IoT Industrial</mat-card-title>
+            <mat-card-subtitle>Nivel: Principiante</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip class="bg-green-100 text-green-800">Completado</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 100%</span>
+              <span class="text-sm font-medium">12/12 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+            <div class="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+              <mat-icon class="h-4 w-4">schedule</mat-icon>
+              <span>Completado: 02/03/2023</span>
+            </div>
+            <div class="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
+              <mat-icon class="h-4 w-4 text-yellow-500">star</mat-icon>
+              <span>Calificación: 4.5/5</span>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="accent">Ver certificado</button>
+            <button mat-button color="accent">Revisar curso</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mat-tab>
+  
+    <mat-tab label="Todos">
+      <div class="grid gap-6 md:grid-cols-2">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Mantenimiento Predictivo con IA</mat-card-title>
+            <mat-card-subtitle>Nivel: Intermedio</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip>En progreso</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 65%</span>
+              <span class="text-sm font-medium">13/20 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" class="w-full">Continuar curso</button>
+          </mat-card-actions>
+        </mat-card>
+  
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Análisis de Datos Industriales</mat-card-title>
+            <mat-card-subtitle>Nivel: Principiante</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip>En progreso</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 30%</span>
+              <span class="text-sm font-medium">6/20 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" class="w-full">Continuar curso</button>
+          </mat-card-actions>
+        </mat-card>
+  
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Introducción a la Industria 4.0</mat-card-title>
+            <mat-card-subtitle>Nivel: Principiante</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip class="bg-green-100 text-green-800">Completado</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 100%</span>
+              <span class="text-sm font-medium">15/15 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="accent" class="w-full">Ver detalles</button>
+          </mat-card-actions>
+        </mat-card>
+  
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Fundamentos de IoT Industrial</mat-card-title>
+            <mat-card-subtitle>Nivel: Principiante</mat-card-subtitle>
+            <span class="spacer"></span>
+            <mat-chip-list>
+              <mat-chip class="bg-green-100 text-green-800">Completado</mat-chip>
+            </mat-chip-list>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-muted-foreground">Progreso: 100%</span>
+              <span class="text-sm font-medium">12/12 lecciones</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="accent" class="w-full">Ver detalles</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  
+  <h2 class="text-xl font-bold mt-8 mb-4">Cursos recomendados para ti</h2>
+  <div class="grid gap-6 md:grid-cols-3">
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-image src="/assets/placeholder.svg" alt="Automatización Industrial" class="h-40 w-full object-cover" />
+        <mat-card-title>Automatización Industrial Avanzada</mat-card-title>
+        <mat-card-subtitle>Nivel: Intermedio-Avanzado</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="flex items-center gap-2 mb-2">
+          <mat-icon class="h-4 w-4 text-muted-foreground">school</mat-icon>
+          <span class="text-sm text-muted-foreground">40 horas de contenido</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <mat-icon class="h-4 w-4 text-muted-foreground">group</mat-icon>
+          <span class="text-sm text-muted-foreground">1,245 estudiantes</span>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="accent" class="w-full">Inscribirse</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-image src="/assets/placeholder.svg" alt="Realidad Virtual" class="h-40 w-full object-cover" />
+        <mat-card-title>Realidad Virtual y Aumentada Industrial</mat-card-title>
+        <mat-card-subtitle>Nivel: Principiante-Intermedio</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="flex items-center gap-2 mb-2">
+          <mat-icon class="h-4 w-4 text-muted-foreground">school</mat-icon>
+          <span class="text-sm text-muted-foreground">25 horas de contenido</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <mat-icon class="h-4 w-4 text-muted-foreground">group</mat-icon>
+          <span class="text-sm text-muted-foreground">890 estudiantes</span>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="accent" class="w-full">Inscribirse</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-image src="/assets/placeholder.svg" alt="Cadena de Suministro" class="h-40 w-full object-cover" />
+        <mat-card-title>Gestión de Cadena de Suministro Digital</mat-card-title>
+        <mat-card-subtitle>Nivel: Avanzado</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="flex items-center gap-2 mb-2">
+          <mat-icon class="h-4 w-4 text-muted-foreground">school</mat-icon>
+          <span class="text-sm text-muted-foreground">45 horas de contenido</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <mat-icon class="h-4 w-4 text-muted-foreground">group</mat-icon>
+          <span class="text-sm text-muted-foreground">720 estudiantes</span>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="accent" class="w-full">Inscribirse</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

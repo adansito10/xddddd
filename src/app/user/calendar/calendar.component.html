@@ -1,0 +1,115 @@
+<div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Calendario de Actividades</h1>
+    <div class="flex gap-2">
+      <mat-form-field class="w-[180px]">
+        <mat-label>Ver por</mat-label>
+        <mat-select value="month">
+          <mat-option value="day">Día</mat-option>
+          <mat-option value="week">Semana</mat-option>
+          <mat-option value="month">Mes</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary">
+        <mat-icon class="mr-2 h-4 w-4">add</mat-icon>
+        Añadir evento
+      </button>
+    </div>
+  </div>
+  
+  <mat-card class="mb-6">
+    <mat-card-content class="p-6">
+      <div class="grid grid-cols-7 gap-1 text-center mb-2">
+        <div class="font-medium">Lun</div>
+        <div class="font-medium">Mar</div>
+        <div class="font-medium">Mié</div>
+        <div class="font-medium">Jue</div>
+        <div class="font-medium">Vie</div>
+        <div class="font-medium">Sáb</div>
+        <div class="font-medium">Dom</div>
+      </div>
+      <div class="grid grid-cols-7 gap-1 text-center">
+        <div *ngFor="let day of days" class="h-24 border rounded-md p-1"
+             [ngClass]="{
+               'bg-background': day > 0 && day <= 30,
+               'bg-muted-50 text-muted-foreground': day <= 0 || day > 30,
+               'ring-2 ring-primary': day === 15
+             }">
+          {{ day > 0 && day <= 30 ? day : '' }}
+          <div *ngIf="day === 15" class="mt-1 text-xs bg-primary-10 text-primary p-1 rounded text-left">
+            18:00 Webinar IA
+          </div>
+          <div *ngIf="day === 24" class="mt-1 text-xs bg-blue-100 text-blue-800 p-1 rounded text-left">
+            10:00 Taller Python
+          </div>
+          <div *ngIf="day === 10" class="mt-1 text-xs bg-green-100 text-green-800 p-1 rounded text-left">
+            Entrega proyecto
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
+  <h2 class="text-xl font-bold mb-4">Próximos eventos</h2>
+  <div class="space-y-4">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Webinar: Tendencias en IA para Industria 4.0</mat-card-title>
+        <mat-card-subtitle>Jueves, 15 de Junio, 2023 • 18:00 - 19:30</mat-card-subtitle>
+        <span class="spacer"></span>
+        <mat-chip-list>
+          <mat-chip>Online</mat-chip>
+        </mat-chip-list>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-sm text-muted-foreground">
+          Únete a nuestros expertos para descubrir las últimas tendencias en Inteligencia Artificial aplicada a la
+          Industria 4.0 y cómo estas tecnologías están transformando el sector industrial.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="accent">Añadir al calendario</button>
+        <button mat-button color="primary">Registrarse</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Taller práctico: Análisis de datos con Python</mat-card-title>
+        <mat-card-subtitle>Sábado, 24 de Junio, 2023 • 10:00 - 13:00</mat-card-subtitle>
+        <span class="spacer"></span>
+        <mat-chip-list>
+          <mat-chip>Online</mat-chip>
+        </mat-chip-list>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-sm text-muted-foreground">
+          Taller práctico donde aprenderás a utilizar Python para analizar datos industriales y obtener insights
+          valiosos para la toma de decisiones en entornos de producción.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="accent">Añadir al calendario</button>
+        <button mat-button color="primary">Registrarse</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Fecha límite: Proyecto final Mantenimiento Predictivo</mat-card-title>
+        <mat-card-subtitle>Lunes, 10 de Junio, 2023 • 23:59</mat-card-subtitle>
+        <span class="spacer"></span>
+        <mat-chip-list>
+          <mat-chip class="bg-red-100 text-red-800">Importante</mat-chip>
+        </mat-chip-list>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-sm text-muted-foreground">
+          Fecha límite para la entrega del proyecto final del curso de Mantenimiento Predictivo con IA. Recuerda
+          incluir todos los elementos requeridos en la rúbrica de evaluación.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" class="w-full">Ver detalles del proyecto</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

@@ -1,0 +1,206 @@
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <h1 class="title">Analíticas de la Plataforma</h1>
+      <div class="header-actions">
+        <mat-form-field appearance="outline" class="period-select">
+          <mat-select [(ngModel)]="selectedPeriod" (ngModelChange)="onPeriodChange($event)">
+            <mat-option value="week">Última semana</mat-option>
+            <mat-option value="month">Último mes</mat-option>
+            <mat-option value="quarter">Último trimestre</mat-option>
+            <mat-option value="year">Último año</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button class="export-btn">
+          <lucide-icon name="download" class="icon"></lucide-icon>
+          Exportar datos
+        </button>
+      </div>
+    </div>
+  
+    <!-- KPI Cards -->
+    <div class="kpi-grid">
+      <mat-card class="kpi-card">
+        <mat-card-header>
+          <mat-card-title>Usuarios activos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="value">876</div>
+          <div class="trend">
+            <lucide-icon name="chevron-right" class="trend-icon"></lucide-icon>
+            <span>+12% vs. mes anterior</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="kpi-card">
+        <mat-card-header>
+          <mat-card-title>Nuevas inscripciones</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="value">245</div>
+          <div class="trend">
+            <lucide-icon name="chevron-right" class="trend-icon"></lucide-icon>
+            <span>+8% vs. mes anterior</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="kpi-card">
+        <mat-card-header>
+          <mat-card-title>Horas de aprendizaje</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="value">12,450</div>
+          <div class="trend">
+            <lucide-icon name="chevron-right" class="trend-icon"></lucide-icon>
+            <span>+15% vs. mes anterior</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="kpi-card">
+        <mat-card-header>
+          <mat-card-title>Certificados emitidos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="value">187</div>
+          <div class="trend">
+            <lucide-icon name="chevron-right" class="trend-icon"></lucide-icon>
+            <span>+22% vs. mes anterior</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <!-- Main Charts -->
+    <div class="charts-grid">
+      <mat-card class="chart-card">
+        <mat-card-header>
+          <mat-card-title>Actividad de usuarios</mat-card-title>
+          <mat-card-subtitle>Usuarios activos diarios y semanales</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-placeholder">
+            <lucide-icon name="line-chart" class="chart-icon"></lucide-icon>
+            <span>Gráfico de actividad de usuarios</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="chart-card">
+        <mat-card-header>
+          <mat-card-title>Inscripciones por curso</mat-card-title>
+          <mat-card-subtitle>Top 10 cursos por número de inscripciones</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-placeholder">
+            <lucide-icon name="bar-chart-3" class="chart-icon"></lucide-icon>
+            <span>Gráfico de inscripciones por curso</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <!-- Detailed Analytics -->
+    <div class="analytics-grid">
+      <mat-card class="analytics-card">
+        <mat-card-header>
+          <mat-card-title>Dispositivos utilizados</mat-card-title>
+          <mat-card-subtitle>Acceso por tipo de dispositivo</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-placeholder">
+            <lucide-icon name="pie-chart" class="chart-icon"></lucide-icon>
+          </div>
+          <div class="data-list">
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot primary"></span>
+                <span>Desktop</span>
+              </div>
+              <span>45%</span>
+            </div>
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot blue"></span>
+                <span>Mobile</span>
+              </div>
+              <span>38%</span>
+            </div>
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot green"></span>
+                <span>Tablet</span>
+              </div>
+              <span>17%</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="analytics-card">
+        <mat-card-header>
+          <mat-card-title>Ubicación geográfica</mat-card-title>
+          <mat-card-subtitle>Usuarios por país</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-placeholder">
+            <lucide-icon name="bar-chart-3" class="chart-icon"></lucide-icon>
+          </div>
+          <div class="data-list">
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot primary"></span>
+                <span>México</span>
+              </div>
+              <span>42%</span>
+            </div>
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot blue"></span>
+                <span>Colombia</span>
+              </div>
+              <span>18%</span>
+            </div>
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot green"></span>
+                <span>España</span>
+              </div>
+              <span>15%</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="analytics-card">
+        <mat-card-header>
+          <mat-card-title>Satisfacción del usuario</mat-card-title>
+          <mat-card-subtitle>Valoraciones promedio</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-placeholder">
+            <lucide-icon name="line-chart" class="chart-icon"></lucide-icon>
+          </div>
+          <div class="data-list">
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot primary"></span>
+                <span>Contenido del curso</span>
+              </div>
+              <span>4.7/5</span>
+            </div>
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot blue"></span>
+                <span>Instructores</span>
+              </div>
+              <span>4.8/5</span>
+            </div>
+            <div class="data-item">
+              <div class="data-label">
+                <span class="dot green"></span>
+                <span>Plataforma</span>
+              </div>
+              <span>4.5/5</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

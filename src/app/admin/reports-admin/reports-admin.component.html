@@ -1,0 +1,179 @@
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <h1 class="title">Reportes</h1>
+      <div class="header-actions">
+        <mat-form-field appearance="outline" class="period-select">
+          <mat-select>
+            <mat-option value="week">Última semana</mat-option>
+            <mat-option value="month">Último mes</mat-option>
+            <mat-option value="quarter">Último trimestre</mat-option>
+            <mat-option value="year">Último año</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button class="generate-btn">
+          <lucide-icon name="file-text" class="icon"></lucide-icon>
+          Generar reporte
+        </button>
+      </div>
+    </div>
+  
+    <!-- Report Cards -->
+    <div class="cards-grid">
+      <mat-card class="report-card">
+        <mat-card-header>
+          <mat-card-title class="card-title">
+            <lucide-icon name="users" class="icon"></lucide-icon>
+            Reporte de usuarios
+          </mat-card-title>
+          <mat-card-subtitle>Actividad y progreso de usuarios</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="description">
+            Análisis detallado de la actividad de los usuarios, incluyendo tiempo de estudio, progreso en cursos y tasas de
+            finalización.
+          </p>
+          <div class="update-info">
+            <lucide-icon name="calendar" class="icon"></lucide-icon>
+            <span>Última actualización: Hoy, 10:30 AM</span>
+          </div>
+        </mat-card-content>
+        <mat-card-footer class="card-footer">
+          <button mat-button variant="outline" size="sm" class="download-btn">
+            <lucide-icon name="download" class="icon"></lucide-icon>
+            PDF
+          </button>
+          <button mat-button variant="outline" size="sm" class="download-btn">
+            <lucide-icon name="download" class="icon"></lucide-icon>
+            Excel
+          </button>
+          <button mat-button size="sm" class="view-btn">Ver reporte</button>
+        </mat-card-footer>
+      </mat-card>
+  
+      <mat-card class="report-card">
+        <mat-card-header>
+          <mat-card-title class="card-title">
+            <lucide-icon name="graduation-cap" class="icon"></lucide-icon>
+            Reporte de cursos
+          </mat-card-title>
+          <mat-card-subtitle>Rendimiento de cursos</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="description">
+            Análisis del rendimiento de los cursos, incluyendo inscripciones, tasas de finalización, valoraciones y
+            comentarios.
+          </p>
+          <div class="update-info">
+            <lucide-icon name="calendar" class="icon"></lucide-icon>
+            <span>Última actualización: Ayer, 4:15 PM</span>
+          </div>
+        </mat-card-content>
+        <mat-card-footer class="card-footer">
+          <button mat-button variant="outline" size="sm" class="download-btn">
+            <lucide-icon name="download" class="icon"></lucide-icon>
+            PDF
+          </button>
+          <button mat-button variant="outline" size="sm" class="download-btn">
+            <lucide-icon name="download" class="icon"></lucide-icon>
+            Excel
+          </button>
+          <button mat-button size="sm" class="view-btn">Ver reporte</button>
+        </mat-card-footer>
+      </mat-card>
+  
+      <mat-card class="report-card">
+        <mat-card-header>
+          <mat-card-title class="card-title">
+            <lucide-icon name="bar-chart-3" class="icon"></lucide-icon>
+            Reporte financiero
+          </mat-card-title>
+          <mat-card-subtitle>Ingresos y transacciones</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="description">
+            Resumen financiero de ingresos, transacciones, ventas de cursos y suscripciones en la plataforma.
+          </p>
+          <div class="update-info">
+            <lucide-icon name="calendar" class="icon"></lucide-icon>
+            <span>Última actualización: 01/06/2023</span>
+          </div>
+        </mat-card-content>
+        <mat-card-footer class="card-footer">
+          <button mat-button variant="outline" size="sm" class="download-btn">
+            <lucide-icon name="download" class="icon"></lucide-icon>
+            PDF
+          </button>
+          <button mat-button variant="outline" size="sm" class="download-btn">
+            <lucide-icon name="download" class="icon"></lucide-icon>
+            Excel
+          </button>
+          <button mat-button size="sm" class="view-btn">Ver reporte</button>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  
+    <!-- Scheduled Reports Table -->
+    <div class="scheduled-reports">
+      <h2 class="section-title">Reportes programados</h2>
+      <mat-card>
+        <mat-card-content class="table-content">
+          <table mat-table class="report-table">
+            <thead>
+              <tr>
+                <th>Nombre del reporte</th>
+                <th>Frecuencia</th>
+                <th>Destinatarios</th>
+                <th>Última ejecución</th>
+                <th>Próxima ejecución</th>
+                <th>Estado</th>
+                <th class="text-right">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Reporte semanal de actividad</td>
+                <td>Semanal (Lunes)</td>
+                <td>Equipo directivo</td>
+                <td>05/06/2023</td>
+                <td>12/06/2023</td>
+                <td>
+                  <span class="badge active">Activo</span>
+                </td>
+                <td class="text-right">
+                  <div class="actions">
+                    <button mat-button variant="ghost" size="sm">Editar</button>
+                    <button mat-button variant="ghost" size="sm" class="delete-btn">Eliminar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Reporte mensual financiero</td>
+                <td>Mensual (Día 1)</td>
+                <td>Departamento financiero</td>
+                <td>01/06/2023</td>
+                <td>01/07/2023</td>
+                <td>
+                  <span class="badge active">Activo</span>
+                </td>
+                <td class="text-right">
+                  <div class="actions">
+                    <button mat-button variant="ghost" size="sm">Editar</button>
+                    <button mat-button variant="ghost" size="sm" class="delete-btn">Eliminar</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <!-- New Report Button -->
+    <div class="new-report">
+      <button mat-button class="schedule-btn">
+        <lucide-icon name="file-text" class="icon"></lucide-icon>
+        Programar nuevo reporte
+      </button>
+    </div>
+  </div>

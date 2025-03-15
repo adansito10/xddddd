@@ -1,0 +1,63 @@
+<div class="table-container">
+  <table-component>
+    <thead>
+      <tr>
+        <th class="course-column">
+          <div class="column-header">
+            Curso
+            <button class="sort-btn">
+              <lucide-icon name="arrow-up-down" class="sort-icon"></lucide-icon>
+            </button>
+          </div>
+        </th>
+        <th>Categoría</th>
+        <th>Instructor</th>
+        <th>Estudiantes</th>
+        <th>Duración</th>
+        <th>Estado</th>
+        <th class="actions-column">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="font-medium">Mantenimiento Predictivo con IA</td>
+        <td>Mantenimiento</td>
+        <td>Carlos Mendoza</td>
+        <td>458</td>
+        <td>40h</td>
+        <td><span class="badge published">Publicado</span></td>
+        <td class="actions-cell">
+          <button class="action-btn">
+            <lucide-icon name="pencil" class="action-icon"></lucide-icon>
+          </button>
+          <button class="action-btn delete">
+            <lucide-icon name="trash" class="action-icon"></lucide-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td class="font-medium">Análisis de Datos Industriales</td>
+        <td>Análisis</td>
+        <td>Ana López</td>
+        <td>372</td>
+        <td>35h</td>
+        <td><span class="badge published">Publicado</span></td>
+        <td class="actions-cell">
+          <button class="action-btn">
+            <lucide-icon name="pencil" class="action-icon"></lucide-icon>
+          </button>
+          <button class="action-btn delete">
+            <lucide-icon name="trash" class="action-icon"></lucide-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table-component>
+</div>
+<div class="card-footer">
+  <span class="footer-text">Mostrando 2 de 24 cursos</span>
+  <div class="pagination">
+    <button class="nav-btn" disabled>Anterior</button>
+    <button class="nav-btn">Siguiente</button>
+  </div>
+</div>

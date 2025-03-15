@@ -1,0 +1,324 @@
+<div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Mi Progreso</h1>
+    <div class="flex gap-2">
+      <mat-form-field class="w-[180px]">
+        <mat-label>Periodo</mat-label>
+        <mat-select value="month">
+          <mat-option value="week">Última semana</mat-option>
+          <mat-option value="month">Último mes</mat-option>
+          <mat-option value="year">Último año</mat-option>
+          <mat-option value="all">Todo el tiempo</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button color="accent">
+        <mat-icon class="mr-2 h-4 w-4">download</mat-icon>
+        Exportar datos
+      </button>
+    </div>
+  </div>
+  
+  <!-- Estadísticas generales -->
+  <div class="grid gap-6 md:grid-cols-4 mb-8">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="text-sm font-medium">Total de cursos</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="text-3xl font-bold">5</div>
+        <div class="flex items-center gap-1 text-xs text-green-600">
+          <mat-icon class="h-3 w-3">arrow_upward</mat-icon>
+          <span>+2 este año</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="text-sm font-medium">Horas de aprendizaje</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="text-3xl font-bold">42.5</div>
+        <div class="flex items-center gap-1 text-xs text-green-600">
+          <mat-icon class="h-3 w-3">arrow_upward</mat-icon>
+          <span>+12.5 este mes</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="text-sm font-medium">Certificados obtenidos</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="text-3xl font-bold">2</div>
+        <div class="flex items-center gap-1 text-xs text-green-600">
+          <mat-icon class="h-3 w-3">arrow_upward</mat-icon>
+          <span>+1 este mes</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="text-sm font-medium">Calificación promedio</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="text-3xl font-bold">4.7/5</div>
+        <div class="flex items-center gap-1 text-xs text-green-600">
+          <mat-icon class="h-3 w-3">arrow_upward</mat-icon>
+          <span>+0.2 desde el último curso</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  <!-- Gráfico de actividad -->
+  <mat-card class="mb-8">
+    <mat-card-header>
+      <mat-card-title>Actividad de aprendizaje</mat-card-title>
+      <mat-card-subtitle>Horas de estudio por semana</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="h-[300px] w-full bg-muted-20 rounded-md flex items-center justify-center">
+        <mat-icon class="h-16 w-16 text-muted-foreground-50">show_chart</mat-icon>
+        <span class="ml-2 text-muted-foreground">Gráfico de actividad de aprendizaje</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
+  <!-- Progreso por curso -->
+  <h2 class="text-xl font-bold mb-4">Progreso por curso</h2>
+  <div class="space-y-4">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Mantenimiento Predictivo con IA</mat-card-title>
+        <span class="spacer"></span>
+        <mat-chip-list>
+          <mat-chip>En progreso</mat-chip>
+        </mat-chip-list>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm text-muted-foreground">Progreso: 65%</span>
+          <span class="text-sm font-medium">13/20 lecciones</span>
+        </div>
+        <mat-progress-bar mode="determinate" value="65" class="mb-4"></mat-progress-bar>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <h3 class="text-sm font-medium mb-2">Desglose por módulos</h3>
+            <div class="space-y-2">
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 1: Introducción</span>
+                  <span>100%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="100" class="h-1"></mat-progress-bar>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 2: Sensores IoT</span>
+                  <span>100%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="100" class="h-1"></mat-progress-bar>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 3: Análisis de datos</span>
+                  <span>75%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="75" class="h-1"></mat-progress-bar>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 4: Implementación</span>
+                  <span>0%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="0" class="h-1"></mat-progress-bar>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium mb-2">Estadísticas</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Tiempo dedicado:</span>
+                <span>12.5 horas</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Última actividad:</span>
+                <span>Ayer</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Calificación actual:</span>
+                <span>85/100</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Fecha estimada de finalización:</span>
+                <span>30/07/2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" class="w-full">Continuar curso</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Análisis de Datos Industriales</mat-card-title>
+        <span class="spacer"></span>
+        <mat-chip-list>
+          <mat-chip>En progreso</mat-chip>
+        </mat-chip-list>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm text-muted-foreground">Progreso: 30%</span>
+          <span class="text-sm font-medium">6/20 lecciones</span>
+        </div>
+        <mat-progress-bar mode="determinate" value="30" class="mb-4"></mat-progress-bar>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <h3 class="text-sm font-medium mb-2">Desglose por módulos</h3>
+            <div class="space-y-2">
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 1: Fundamentos</span>
+                  <span>100%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="100" class="h-1"></mat-progress-bar>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 2: Herramientas</span>
+                  <span>50%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="50" class="h-1"></mat-progress-bar>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 3: Visualización</span>
+                  <span>0%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="0" class="h-1"></mat-progress-bar>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>Módulo 4: Casos prácticos</span>
+                  <span>0%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="0" class="h-1"></mat-progress-bar>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium mb-2">Estadísticas</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Tiempo dedicado:</span>
+                <span>8 horas</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Última actividad:</span>
+                <span>Hace 3 días</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Calificación actual:</span>
+                <span>78/100</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted-foreground">Fecha estimada de finalización:</span>
+                <span>15/09/2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" class="w-full">Continuar curso</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+  <!-- Logros y habilidades -->
+  <h2 class="text-xl font-bold mt-8 mb-4">Logros y habilidades</h2>
+  <div class="grid gap-6 md:grid-cols-2">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Logros desbloqueados</mat-card-title>
+        <mat-card-subtitle>3 de 12 logros completados</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-full bg-primary-10 flex items-center justify-center flex-shrink-0">
+              <mat-icon class="h-5 w-5 text-primary">star</mat-icon>
+            </div>
+            <div>
+              <h3 class="font-medium">Primer curso completado</h3>
+              <p class="text-sm text-muted-foreground">Completaste tu primer curso en la plataforma.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-full bg-primary-10 flex items-center justify-center flex-shrink-0">
+              <mat-icon class="h-5 w-5 text-primary">school</mat-icon>
+            </div>
+            <div>
+              <h3 class="font-medium">Primer certificado</h3>
+              <p class="text-sm text-muted-foreground">Obtuviste tu primer certificado verificado.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-full bg-primary-10 flex items-center justify-center flex-shrink-0">
+              <mat-icon class="h-5 w-5 text-primary">schedule</mat-icon>
+            </div>
+            <div>
+              <h3 class="font-medium">Estudiante dedicado</h3>
+              <p class="text-sm text-muted-foreground">Completaste más de 20 horas de estudio.</p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Habilidades adquiridas</mat-card-title>
+        <mat-card-subtitle>Basado en los cursos completados</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium">Industria 4.0</span>
+              <span class="text-sm">Avanzado</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="85" class="h-2"></mat-progress-bar>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium">IoT Industrial</span>
+              <span class="text-sm">Intermedio</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="65" class="h-2"></mat-progress-bar>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium">Análisis de datos</span>
+              <span class="text-sm">Principiante</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="30" class="h-2"></mat-progress-bar>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium">Mantenimiento predictivo</span>
+              <span class="text-sm">Intermedio</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="60" class="h-2"></mat-progress-bar>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>

@@ -1,0 +1,200 @@
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Dashboard</h1>
+      <div class="flex gap-2">
+        <button mat-stroked-button>
+          <mat-icon>description</mat-icon>
+          Exportar datos
+        </button>
+        <button mat-raised-button color="primary">
+          <mat-icon>add</mat-icon>
+          Nuevo curso
+        </button>
+      </div>
+    </div>
+  
+    <!-- Stats Overview -->
+    <div class="grid gap-6 md:grid-cols-4">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="text-sm font-medium">Total de usuarios</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="text-3xl font-bold">1,248</div>
+          <p class="text-xs text-muted-foreground">+86 este mes</p>
+          <div class="progress-bar">
+            <div class="progress-fill w-3/4"></div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="text-sm font-medium">Cursos activos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="text-3xl font-bold">24</div>
+          <p class="text-xs text-muted-foreground">+3 este mes</p>
+          <div class="progress-bar">
+            <div class="progress-fill w-1/2"></div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="text-sm font-medium">Tasa de finalización</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="text-3xl font-bold">78%</div>
+          <p class="text-xs text-muted-foreground">+5% este mes</p>
+          <div class="progress-bar">
+            <div class="progress-fill w-4/5"></div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="text-sm font-medium">Ingresos mensuales</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="text-3xl font-bold">$42,500</div>
+          <p class="text-xs text-muted-foreground">+12% este mes</p>
+          <div class="progress-bar">
+            <div class="progress-fill w-[85%]"></div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <!-- Analytics Charts -->
+    <div class="grid gap-6 md:grid-cols-2">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Actividad de usuarios</mat-card-title>
+          <mat-card-subtitle>Usuarios activos en los últimos 30 días</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-placeholder">
+            <mat-icon class="icon">timeline</mat-icon>
+            <span>Gráfico de actividad de usuarios</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Distribución de cursos</mat-card-title>
+          <mat-card-subtitle>Popularidad por categoría</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-placeholder">
+            <mat-icon class="icon">pie_chart</mat-icon>
+            <span>Gráfico de distribución de cursos</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <!-- Recent Users -->
+    <mat-card>
+      <mat-card-header>
+        <div class="flex-row-between">
+          <div>
+            <mat-card-title>Usuarios recientes</mat-card-title>
+            <mat-card-subtitle>Los últimos usuarios registrados en la plataforma</mat-card-subtitle>
+          </div>
+          <button mat-stroked-button (click)="navigateTo('/panel/admin/users-admin')">
+            Ver todos
+          </button>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <table mat-table [dataSource]="usersData">
+          <ng-container matColumnDef="usuario">
+            <th mat-header-cell *matHeaderCellDef>Usuario</th>
+            <td mat-cell *matCellDef="let user">
+              <div class="flex items-center gap-2">
+                <mat-icon>account_circle</mat-icon>
+                <span>{{ user.name }}</span>
+              </div>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="correo">
+            <th mat-header-cell *matHeaderCellDef>Correo</th>
+            <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+          </ng-container>
+          <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef>Fecha de registro</th>
+            <td mat-cell *matCellDef="let user">{{ user.registerDate }}</td>
+          </ng-container>
+          <ng-container matColumnDef="cursos">
+            <th mat-header-cell *matHeaderCellDef>Cursos</th>
+            <td mat-cell *matCellDef="let user">{{ user.courses }}</td>
+          </ng-container>
+          <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef>Estado</th>
+            <td mat-cell *matCellDef="let user">
+              <span class="badge active">Activo</span>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef class="text-right">Acciones</th>
+            <td mat-cell *matCellDef="let user" class="text-right">
+              <button mat-button>Editar</button>
+            </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  
+    <!-- Quick Actions -->
+    <div class="grid gap-6 md:grid-cols-3">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>person_add</mat-icon> Añadir usuario
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-sm text-muted-foreground">Añade un nuevo usuario a la plataforma de capacitación.</p>
+          <button mat-raised-button color="primary" class="w-full" (click)="navigateTo('/panel/admin/users-admin')">
+            Añadir usuario
+          </button>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>school</mat-icon> Crear curso
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-sm text-muted-foreground">Crea un nuevo curso de capacitación para tus usuarios.</p>
+          <button mat-raised-button color="primary" class="w-full" (click)="navigateTo('/panel/admin/courses-admin')">
+            Crear curso
+          </button>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>description</mat-icon> Generar reporte
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-sm text-muted-foreground">Genera un reporte detallado de la actividad de la plataforma.</p>
+          <button mat-raised-button color="primary" class="w-full" (click)="navigateTo('/panel/admin/reports-admin')">
+            Generar reporte
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+</div>
